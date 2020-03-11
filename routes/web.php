@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/members', 'UserController@members')->name('members');
+
+Route::get('/members/{id}/show', 'UserController@show')->name('members.show');
+
+Route::get('/profile', 'UserController@profile')->name('profile');
+
+Route::get('/category', 'UserController@category')->name('category');
