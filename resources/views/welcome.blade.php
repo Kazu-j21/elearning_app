@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #151515;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="image/welcome.jpg" alt="">
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://gc-eikaiwa.com">Link1</a>
+                    <a href="https://goodconversation-eikaiwa.com">Link2</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
