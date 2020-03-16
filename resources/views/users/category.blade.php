@@ -105,37 +105,4 @@
             </div>
         </div>
     </div>
-{{-- 
-    <div class="card text-white bg-primary mb-3 d-inline-block" style="max-width: 20rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-          <h4 class="card-title">Primary card title</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#!" class="card-link bg-dark">Card link</a>
-          <a href="#!" class="card-link bg-dark">Another link</a>
-        </div>
-      </div>
-      <div class="card text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-          <h4 class="card-title">Primary card title</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#!" class="card-link">Card link</a>
-          <a href="#!" class="card-link">Another link</a>
-        </div>
-      </div>
-
-      <div class="card" style="max-width: 20rem;">
-        <div class="card-body">
-          <h4 class="card-title">Card title</h4>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">
-            Some quick example text to build on the card title
-            and make up the bulk of the card's content.
-          </p>
-          <a href="#!" class="card-link">Card link</a>
-          <a href="#!" class="card-link">Another link</a>
-        </div>
-      </div> --}}
-
 @endsection

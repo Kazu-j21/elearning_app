@@ -26,7 +26,6 @@
             </div>
         </div>
 
-
         <div class="col-md-8">
             <div class="card mb-4">
                 <div class="card-header">ACTIVITY FEED</div>
@@ -40,9 +39,7 @@
                     <p> Nothing to show</p> 
                 </div>
             </div>
-        </div>
-
-        
+        </div>        
     </div>
 </div>
 @endsection

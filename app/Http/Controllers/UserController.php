@@ -13,13 +13,13 @@ class UserController extends Controller
     }
 
     public function members(){
-        $members=User::where('id', '!=', auth()->user()->id)->get();
+        $members = User::where('id', '!=', auth()->user()->id)->get();
 
         return view('users.members', compact('members'));
     }
 
     public function show($id){
-        $user=User::find($id);
+        $user = User::find($id);
 
         return view('users.show', compact('user'));
     }
