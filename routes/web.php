@@ -26,3 +26,21 @@ Route::get('/members/{id}/show', 'UserController@show')->name('members.show');
 Route::get('/profile', 'UserController@profile')->name('profile');
 
 Route::get('/category', 'UserController@category')->name('category');
+
+Route::get('/admin', 'CategoryController@admin')->name('admin');
+
+Route::post('/admin/store', 'CategoryController@store')->name('admin.store');
+
+Route::get('/admin/new', 'CategoryController@create')->name('admin.new');
+
+Route::get('/admin/{id}/show', 'CategoryController@show')->name('admin.show');
+
+Route::get('/admin/{id}/add', 'CategoryController@add')->name('admin.add');
+
+Route::get('/admin/{id}/addWord', 'CategoryController@addWord')->name('admin.addWord');
+
+Route::get('/admin/{id}/edit', 'CategoryController@edit')->name('admin.edit');
+
+Route::patch('/admin/{id}/update', 'CategoryController@update')->name('admin.update');
+
+Route::delete('/admin/{id}/delete', 'CategoryController@delete')->name('admin.delete');
