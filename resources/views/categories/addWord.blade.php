@@ -15,9 +15,10 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form class="new_word" action="/" method="post">
+                    <form class="new_word" action="/admin/{{$category->id}}/addWord/store" method="post">
+                        @csrf
                         {{-- <input name="utf8" type="hidden" value="✓"> --}}
-                        <input type="hidden">
+                        <input type="hidden" name="category_id" value="{{ $category->id }}">
                         <div class="row">
                             <div class="col-sm-8 mx-auto">
                                 <div class="form-group row">
@@ -25,7 +26,7 @@
                                         <label for="word_content">Word</label>
                                     </div>
                                     <div class="col-sm-7">
-                                        <input class="form-control" type="text">
+                                        <input class="form-control" type="text" name="text">
                                     </div>
                                 </div>
 
@@ -36,34 +37,31 @@
                                     <div class="col-sm-9">
                                         <div class="form-group row">
                                             <div class="col-sm-9">
-                                                <input class="form-control" type="text">
+                                                <input class="form-control" name="choice1" type="text">
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                {{-- <input type="hidden" value="0"> --}}
-                                                <input type="checkbox" value="1">
+                                                <input type="radio" name="is_correct" value="choice1">
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-sm-9">
-                                                <input class="form-control" type="text">
+                                                <input class="form-control" name="choice2" type="text">
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                {{-- <input type="hidden" value="0"> --}}
-                                                <input type="checkbox" value="1">
+                                                <input type="radio" name="is_correct" value="choice2">
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-sm-9">
-                                                <input class="form-control" type="text">
+                                                <input class="form-control" name="choice3" type="text">
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                {{-- <input type="hidden" value="0"> --}}
-                                                <input type="checkbox" value="1">
+                                                <input type="radio" name="is_correct" value="choice3">
                                                 </label>
                                             </div>
                                         </div>

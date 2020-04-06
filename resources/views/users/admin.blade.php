@@ -34,23 +34,23 @@
                            @foreach($listOfcategories as $category)
                                 <tr>
                                     <td><a href="/admin/{{$category->id}}/show">{{$category->id}}</a></td>
-                                    <td>{{$category->title}}</td>
-                                    <td>{{$category->description}}</td>
-                                    <td>0</td>
+                                    <td>{{ $category->title }}</td>
+                                    <td>{{ $category->description }}</td>
+                                    <td>{{ $category->questions->count() }}</td>
                                     <td>
                                         <div class="row">
-                                            <div class="col-sm-2">
-                                                <a class="btn btn-primary" href="/admin/{{$category->id}}/add">Add Word</a>
+                                            <div>
+                                                <a class="btn btn-sm btn-primary" href="/admin/{{$category->id}}/add">Add Word</a>
                                             </div>
-                                            <div class="col-sm-2">
-                                                <a class="btn btn-warning" href="/admin/{{$category->id}}/edit">Edit</a>
+                                            <div class="ml-2">
+                                                <a class="btn btn-sm btn-warning" href="/admin/{{$category->id}}/edit">Edit</a>
                                             </div>
-                                            <div class="col-sm-1">
+                                            <div class="d-flex ml-2">
                                                 <form action="/admin/{{$category->id}}/delete" method="post">
                                                     @method('DELETE')
                                                     @csrf
                                                     {{-- <a class="btn btn-sm btn-default text-muted" href="/admin/{{$category->id}}/delete">Remove</a> --}}
-                                                    <input type="submit" class="btn btn-secondary" value="Remove">
+                                                    <input type="submit" class="btn btn-sm btn-link" value="Remove">
                                                 </form>  
                                             </div>
                                         </div>
