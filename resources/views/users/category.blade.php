@@ -5,104 +5,39 @@
 @endsection
 
 @section('content')
-   
-    <div class="header">
-        <h1>Categories</h1>
-    </div>
-
-    <div class="container">
-        <div class="row object-list">
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default" href="/">Learn</a>
+    <div class="container py-5 mx-auto">
+        <ul class="nav nav-pills nav-warning float-right justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/new">Add category</a>
+            </li>
+        </ul>
+        <h1>
+            Categories 
+            <small class="text-muted font-weight-normal">{{ $category->count() }}</small>
+            {{-- <small class="text-muted font-weight-normal">{{ App\Category::all()->count() }}</small> --}}
+        </h1>
+        <div class="row object-list mt-4"> 
+            @foreach ($listOfcategories as $category)
+                <div class="col-md-6 mb-4">
+                    <article class="card p-2 h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">{{$category->title}}</h4>
+                            <p class="card-text">
+                                <strong>[{{ $category->questions->count() }} words]</strong>
+                                {{$category->description}}
+                            </p>
+                            <div class="mt-5">
+                                <a class="btn btn-outline-primary btn-block" href="/category/{{$category->id}}/lesson">
+                                        Learn
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default bg-dark" href="/">Already Learned</a>
-                            </div>
-                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default bg-dark" href="/">Already Learned</a>
-                            </div>
-                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default bg-dark" href="/">Already Learned</a>
-                            </div>
-                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default bg-dark" href="/">Already Learned</a>
-                            </div>
-                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default bg-dark" href="/">Already Learned</a>
-                            </div>
-                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-4">
-                <section class="col-sm-12">
-                    <div class="detail">
-                        <div class="card bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-default bg-dark" href="/">Already Learned</a>
-                            </div>
-                         </div>
-                    </div>
-                </section>
-            </div>
+                    </article>
+                </div>
+            @endforeach
+        </div>
+        <div class="d-flex justify-content-center paginate mt-5">
+            {{ $listOfcategories->links() }}
         </div>
     </div>
 @endsection

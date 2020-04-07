@@ -26,7 +26,7 @@
                                         <label for="word_content">Word</label>
                                     </div>
                                     <div class="col-sm-7">
-                                        <input class="form-control" type="text" name="text">
+                                        <input class="form-control" type="text" name="text" required>
                                     </div>
                                 </div>
 
@@ -41,7 +41,7 @@
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="radio" name="is_correct" value="choice1">
+                                                <input type="radio" name="is_correct" value="choice1" required>
                                                 </label>
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="radio" name="is_correct" value="choice2">
+                                                <input type="radio" name="is_correct" value="choice2" required>
                                                 </label>
                                             </div>
                                         </div>
@@ -61,7 +61,7 @@
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="radio" name="is_correct" value="choice3">
+                                                <input type="radio" name="is_correct" value="choice3" required>
                                                 </label>
                                             </div>
                                         </div>

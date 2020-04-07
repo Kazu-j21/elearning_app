@@ -19,7 +19,6 @@
                 <form class="new_word" action="{{ route('admin.addWord.update', ['category_id' => $category->id, 'question_id' => $question->id]) }}" method="post">
                     @method('PATCH')
                     @csrf
-                    {{-- <input name="utf8" type="hidden" value="✓"> --}}
                     <input type="hidden" name="category_id" value="{{ $category->id }}">
                     <div class="row">
                         <div class="col-sm-8 mx-auto">
@@ -50,39 +49,6 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                    {{-- <div class="form-group row">
-                                        <div class="col-sm-9">
-                                        <input class="form-control" type="text" value="">
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <label for="">Correct
-                                            <input type="hidden" value="0">
-                                            <input type="checkbox" value="1">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-9">
-                                            <input class="form-control" type="text" value="{{$choice->text}}">
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <label for="">Correct
-                                            <input type="hidden" value="0">
-                                            <input type="checkbox" value="1">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-9">
-                                            <input class="form-control" type="text" value="{{$choice->text}}">
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <label for="">Correct
-                                            <input type="hidden" value="0">
-                                            <input type="checkbox" value="1">
-                                            </label>
-                                        </div>
-                                    </div> --}}
                                 </div>
                             </div>
 

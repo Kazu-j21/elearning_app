@@ -54,3 +54,15 @@ Route::get('/admin/{category_id}/addWord/{question_id}/edit', 'QuestionControlle
 Route::patch('/admin/{category_id}/addWord/{question_id}/update', 'QuestionController@addWordupdate')->name('admin.addWord.update');
 
 Route::delete('/admin/{category_id}/addWord/{question_id}/remove', 'QuestionController@addWordremove')->name('admin.addWord.remove');
+
+Route::get('/category/{category_id}/lesson', 'LessonController@lesson')->name('category.lesson');
+
+Route::get('/categroy/{category_id}/lesson/{lesson_id}/answer', 'AnswerController@lessonAnswer')->name('category.lesson.answer');
+
+Route::post('/category/{category_id}/lesson/{lesson_id}/store', 'AnswerController@lessonStore')->name('category.lesson.store');
+
+Route::get('/category/{category_id}/lesson/{lesson_id}/result', 'AnswerController@lessonResult')->name('category.lesson.result');
+
+Route::get('/follow/{followed_id}', 'UserController@follow')->name('user.follow');
+
+Route::get('/unfollow/{followed_id}', 'UserController@unfollow')->name('user.unfollow');

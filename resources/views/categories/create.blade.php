@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container py-5">
         <div class="container">
             <div class="card">
@@ -25,7 +24,7 @@
                                         <label for="">Title</label>
                                     </div>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="title">
+                                        <input type="text" class="form-control" name="title" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -33,7 +32,7 @@
                                         <label for="">Description</label>
                                     </div>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="description">
+                                        <input type="text" class="form-control" name="description" required>
                                     </div>
                                 </div>
                                 <div class="text-center">

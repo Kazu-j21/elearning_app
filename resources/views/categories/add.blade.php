@@ -22,53 +22,47 @@
                 </div>
                 <table class="table">
                     <tbody>
-
                         <tr>
                             <th>Words</th>
                             <th>Answer</th>
+                            <th>Choices</th>
                             <th>Action</th>
                         </tr>
 
                         @foreach ($category->questions as $question)
-                        <tr>
-                            <td>
-                                {{ $question->text }}
-                            </td>
-                            <td>
-                                {{-- {{ $question->answer()->get()[0]->text }} --}}
+                            <tr>
+                                <td>
+                                    {{ $question->text }}
+                                </td>
+                                <td>
+                                    {{-- {{ $question->answer()->get()[0]->text }} --}}
 
-                                {{ $question->answer()->text }}
-                                
-                                {{-- @foreach ($question->choices as $choice)
-                                    @if ($choice->is_correct == 1)
-                                        {{ $choice->text }}
-                                    @endif
-                                @endforeach --}}
-                            </td>
-                            {{-- <td>
-                                @foreach ($question->choices as $choice)
-                                    {{$choice->text}}
-                                @endforeach
-                            </td> --}}
-                            <td class="d-flex">
-                                <a class="btn btn-sm btn-warning" href='/admin/{{$category->id}}/addWord/{{$question->id}}/edit'>Edit</a>
-                                <form action="/admin/{{$category->id}}/addWord/{{$question->id}}/remove" method="post">
-                                    @method('DELETE')
-                                    @csrf
-                                    <input type="submit" class="btn btn-sm btn-link" value="Remove">
-                                </form>
-                                {{-- <a class="btn btn-sm btn-default" href="/admin/{{$category->id}}/addWord/{{$question->id}}/remove">Remove</a> --}}
-                            </td>
-                        </tr>
-                        @endforeach
-                        
+                                    {{ $question->answer()->text }}
+                                    
+                                    {{-- @foreach ($question->choices as $choice)
+                                        @if ($choice->is_correct == 1)
+                                            {{ $choice->text }}
+                                        @endif
+                                    @endforeach --}}
+                                </td>
+                                <td>
+                                    @foreach ($question->choices as $choice)
+                                        {{$choice->text}}
+                                    @endforeach
+                                </td>
+                                <td class="d-flex">
+                                    <a class="btn btn-sm btn-warning" href='/admin/{{$category->id}}/addWord/{{$question->id}}/edit'>Edit</a>
+                                    <form action="/admin/{{$category->id}}/addWord/{{$question->id}}/remove" method="post">
+                                        @method('DELETE')
+                                        @csrf
+                                        <input type="submit" class="btn btn-sm btn-link" value="Remove">
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach 
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    {{-- <h1>Category#{{$category->id}}: {{$category->title}}</h1>
-    <h2>{{$category->description}}</h2>
-<a class="btn btn-primary" href="/admin/{{$category->id}}/addWord">Add Word</a>
-    <a class="btn btn-secondary" href="/admin">Back</a> --}}
 @endsection

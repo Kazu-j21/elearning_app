@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- <div class="title">
-        <h1>Admin|Category</h1>
-        <a href="/admin/new">Add category</a>
-    </div> --}}
-
     <div class="container py-5">
         <div class="container">
             <div class="card">
@@ -19,7 +14,6 @@
                         </div>
                     </div>
                 </div>
-
                  <table class="table">
                         <tbody>
                             <tr>
@@ -33,7 +27,11 @@
 
                            @foreach($listOfcategories as $category)
                                 <tr>
-                                    <td><a href="/admin/{{$category->id}}/show">{{$category->id}}</a></td>
+                                    <td>
+                                        <a href="/admin/{{$category->id}}/show">
+                                            {{$category->id}}
+                                        </a>
+                                    </td>
                                     <td>{{ $category->title }}</td>
                                     <td>{{ $category->description }}</td>
                                     <td>{{ $category->questions->count() }}</td>
@@ -49,7 +47,6 @@
                                                 <form action="/admin/{{$category->id}}/delete" method="post">
                                                     @method('DELETE')
                                                     @csrf
-                                                    {{-- <a class="btn btn-sm btn-default text-muted" href="/admin/{{$category->id}}/delete">Remove</a> --}}
                                                     <input type="submit" class="btn btn-sm btn-link" value="Remove">
                                                 </form>  
                                             </div>
@@ -57,20 +54,9 @@
                                     </td>
                                 </tr>
                            @endforeach
-
-                           {{-- <div class="card-footer paginate text-center">
-                               <nav>
-                                   <ul class="pagination">
-                                       <li class="page-item disabled">
-                                           <span class="page-link">←</span>
-                                       </li>
-                                   </ul>
-                               </nav>
-                           </div> --}}
                         </tbody>
                     </table>
+                </div>
             </div>
         </div>
-    </div>
-   
 @endsection
