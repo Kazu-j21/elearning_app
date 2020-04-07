@@ -44,3 +44,13 @@ Route::get('/admin/{id}/edit', 'CategoryController@edit')->name('admin.edit');
 Route::patch('/admin/{id}/update', 'CategoryController@update')->name('admin.update');
 
 Route::delete('/admin/{id}/delete', 'CategoryController@delete')->name('admin.delete');
+
+Route::post('/admin/{id}/addWord/store', 'QuestionController@addWordstore')->name('admin.addWord.store');
+
+// Route::post('/admin/{id}/addWord/store/choices', 'ChoiceController@addChoices')->name('admin.addWord.store.choices');
+
+Route::get('/admin/{category_id}/addWord/{question_id}/edit', 'QuestionController@addWordedit')->name('admin.addWord.edit');
+
+Route::patch('/admin/{category_id}/addWord/{question_id}/update', 'QuestionController@addWordupdate')->name('admin.addWord.update');
+
+Route::delete('/admin/{category_id}/addWord/{question_id}/remove', 'QuestionController@addWordremove')->name('admin.addWord.remove');

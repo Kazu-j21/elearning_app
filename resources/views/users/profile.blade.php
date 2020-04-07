@@ -97,7 +97,7 @@
                                 learned 2 of 2 in
                                 <a class="badge badge-primary" href="/">title1</a>
                                 <div>
-                                    <footer class="blockquote-footer">Posted <cite> {{ $category->created_at->diffForHumans() }}</cite></footer> 
+                                    {{-- <footer class="blockquote-footer">Posted <cite> {{ $category->created_at->diffForHumans() }}</cite></footer>  --}}
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                                 learned 2 of 2 in
                                 <a class="badge badge-primary" href="/">title1</a>
                                 <div>
-                                    <footer class="blockquote-footer">Posted <cite> {{ $category->created_at->diffForHumans() }}</cite></footer> 
+                                    {{-- <footer class="blockquote-footer">Posted <cite> {{ $category->created_at->diffForHumans() }}</cite></footer>  --}}
                                 </div>
                             </div>
                         </div>
