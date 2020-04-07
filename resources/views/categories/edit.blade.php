@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/admin/{{$category->id}}/update" method="post">
+                    <form action="/admin/{{ $category->id }}/update" method="post">
                         @method('PATCH')
                         @csrf
                         <div class="row">
@@ -25,7 +25,7 @@
                                         <label for="">Title</label>
                                     </div>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="title" value="{{$category->title}}">
+                                        <input type="text" class="form-control" name="title" value="{{ $category->title }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -33,7 +33,7 @@
                                         <label for="">Description</label>
                                     </div>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="description" value="{{$category->description}}">
+                                        <input type="text" class="form-control" name="description" value="{{ $category->description }}">
                                     </div>
                                 </div>
                                 <div class="text-center">

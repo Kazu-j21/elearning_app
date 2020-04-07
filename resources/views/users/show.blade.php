@@ -15,7 +15,7 @@
                                         </i>
                                     </div>
                                 </div>
-                                <h2>{{$user->name}}</h2>
+                                <h2>{{ $user->name }}</h2>
                                 <h3 class="ml-auto">
                                     @if (auth()->user()->isFollowing($user->id))
                                     <a href="{{ route('user.unfollow', ['followed_id' => $user->id]) }}" class="btn btn-danger">Unfollow</a>
@@ -28,20 +28,20 @@
                                 <div class="row mt-15">
                                     <div class="col-sm-6">
                                         <strong>
-                                            <p class="text-center">{{$user->followedUsers()->count()}}</p>
+                                            <p class="text-center">{{ $user->followedUsers()->count() }}</p>
                                         </strong>
                                         <div>following</div>
                                     </div>
                                     <div class="col-sm-6">
                                         <strong>
-                                            <p class="text-center">{{$user->followers()->count()}}</p>
+                                            <p class="text-center">{{ $user->followers()->count() }}</p>
                                         </strong>
                                         <div>followers</div>
                                     </div>
                                 </div>
                                 <hr>
                                 <h4> 
-                                    {{$user->learnedWords()->count()}}
+                                    {{ $user->learnedWords()->count() }}
                                     {{-- {{auth()->user()->learnedWords()->count()}} --}}
                                 </h4>
                                 <small>words learned</small>

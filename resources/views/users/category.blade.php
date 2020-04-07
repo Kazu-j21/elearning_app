@@ -21,13 +21,13 @@
                 <div class="col-md-6 mb-4">
                     <article class="card p-2 h-100">
                         <div class="card-body">
-                            <h4 class="card-title">{{$category->title}}</h4>
+                            <h4 class="card-title">{{ $category->title }}</h4>
                             <p class="card-text">
                                 <strong>[{{ $category->questions->count() }} words]</strong>
-                                {{$category->description}}
+                                {{ $category->description }}
                             </p>
                             <div class="mt-5">
-                                <a class="btn btn-outline-primary btn-block" href="/category/{{$category->id}}/lesson">
+                                <a class="btn btn-outline-primary btn-block" href="/category/{{ $category->id }}/lesson">
                                         Learn
                                 </a>
                             </div>

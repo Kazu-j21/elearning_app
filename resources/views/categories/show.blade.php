@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-sm-6">
-                            <span>Admin | {{$category->title}} - Words</span>
+                            <span>Admin | {{ $category->title }} - Words</span>
                         </div>
                         <div class="col-sm-6 text-right">
                             <a class="btn btn-sm" href="/admin">Back</a>
@@ -15,8 +15,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h2>{{$category->title}}</h2>
-                    <p>{{$category->description}}</p>
+                    <h2>{{ $category->title }}</h2>
+                    <p>{{ $category->description }}</p>
                 </div>
                 <table class="table">
                     <tbody>

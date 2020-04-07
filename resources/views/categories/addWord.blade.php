@@ -7,15 +7,15 @@
                 <div class="card-header">
                     <div class="row">
                             <div class="col-sm-6">
-                                <span>Admin|{{$category->title}}|Word</span>
+                                <span>Admin|{{ $category->title }}|Word</span>
                             </div>
                             <div class="col-sm-6 text-right">
-                                <a class="btn btn-sm" href="/admin/{{$category->id}}/add">Back</a>
+                                <a class="btn btn-sm" href="/admin/{{ $category->id }}/add">Back</a>
                             </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form class="new_word" action="/admin/{{$category->id}}/addWord/store" method="post">
+                    <form class="new_word" action="/admin/{{ $category->id }}/addWord/store" method="post">
                         @csrf
                         {{-- <input name="utf8" type="hidden" value="✓"> --}}
                         <input type="hidden" name="category_id" value="{{ $category->id }}">
@@ -78,5 +78,4 @@
             </div>
         </div>
     </div>
-   
 @endsection

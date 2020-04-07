@@ -28,8 +28,8 @@
                            @foreach($listOfcategories as $category)
                                 <tr>
                                     <td>
-                                        <a href="/admin/{{$category->id}}/show">
-                                            {{$category->id}}
+                                        <a href="/admin/{{ $category->id }}/show">
+                                            {{ $category->id }}
                                         </a>
                                     </td>
                                     <td>{{ $category->title }}</td>
@@ -38,13 +38,13 @@
                                     <td>
                                         <div class="row">
                                             <div>
-                                                <a class="btn btn-sm btn-primary" href="/admin/{{$category->id}}/add">Add Word</a>
+                                                <a class="btn btn-sm btn-primary" href="/admin/{{ $category->id }}/add">Add Word</a>
                                             </div>
                                             <div class="ml-2">
-                                                <a class="btn btn-sm btn-warning" href="/admin/{{$category->id}}/edit">Edit</a>
+                                                <a class="btn btn-sm btn-warning" href="/admin/{{ $category->id }}/edit">Edit</a>
                                             </div>
                                             <div class="d-flex ml-2">
-                                                <form action="/admin/{{$category->id}}/delete" method="post">
+                                                <form action="/admin/{{ $category->id }}/delete" method="post">
                                                     @method('DELETE')
                                                     @csrf
                                                     <input type="submit" class="btn btn-sm btn-link" value="Remove">

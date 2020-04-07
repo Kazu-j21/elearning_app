@@ -15,26 +15,26 @@
                                         </i>
                                     </div>
                                 </div>
-                                <h2>{{Auth::user()->name}}</h2>
-                                <h3>{{Auth::user()->email}}</h3>
+                                <h2>{{ Auth::user()->name }}</h2>
+                                <h3>{{ Auth::user()->email }}</h3>
                                 <hr>
                                 <div class="row mt-15">
                                     <div class="col-sm-6">
                                         <strong>
-                                            <p class="text-center">{{auth()->user()->followedUsers()->count()}}</p>
+                                            <p class="text-center">{{ auth()->user()->followedUsers()->count() }}</p>
                                         </strong>
                                         <div>following</div>
                                     </div>
                                     <div class="col-sm-6">
                                         <strong>
-                                            <p class="text-center">{{auth()->user()->followers()->count()}}</p>
+                                            <p class="text-center">{{ auth()->user()->followers()->count() }}</p>
                                         </strong>
                                         <div>followers</div>
                                     </div>
                                 </div>
                                 <hr>
                                 <h4> 
-                                    {{Auth::user()->learnedWords()->count()}}
+                                    {{ Auth::user()->learnedWords()->count() }}
                                     {{-- {{auth()->user()->learnedWords()->count()}} --}}
                                 </h4>
                                 <small>words learned</small>

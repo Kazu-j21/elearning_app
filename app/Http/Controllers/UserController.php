@@ -64,12 +64,6 @@ class UserController extends Controller
 
         $follower->followedUsers()->detach($toUnfollowUser);
 
-        // $relationship = Relationship::where('follower_id', $follower->id)->where('followed_id', $followed_id)->first();
-        // $relationship->activity()->create([
-        //     'user_id' => $follower->id,
-        //     'text' => $follower->name . " unfollowed " . $toUnfollowUser->name
-        // ]);
-
         // return redirect()->route('index');
         return back();
     }

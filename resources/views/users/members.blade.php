@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="media-body py-3">
                                         <strong>
-                                            <a href="/members/{{$user->id}}/show">{{$user->name}}</a>
+                                            <a href="/members/{{ $user->id }}/show">{{ $user->name }}</a>
                                         </strong>
                                         <div class="float-right">
                                             @if (auth()->user()->isFollowing($user->id))

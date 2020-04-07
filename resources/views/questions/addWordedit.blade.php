@@ -7,10 +7,10 @@
             <div class="card-header">
                 <div class="row">
                         <div class="col-sm-6">
-                            <span>Admin|{{$category->title}}|Word</span>
+                            <span>Admin|{{ $category->title }}|Word</span>
                         </div>
                         <div class="col-sm-6 text-right">
-                            <a class="btn btn-sm" href="/admin/{{$category->id}}/add">Back</a>
+                            <a class="btn btn-sm" href="/admin/{{ $category->id }}/add">Back</a>
                         </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                                     <label for="word_content">Word</label>
                                 </div>
                                 <div class="col-sm-7">
-                                <input class="form-control" type="text" name="text" value="{{$question->text}}">
+                                <input class="form-control" type="text" name="text" value="{{ $question->text }}">
                                 </div>
                             </div>
 
@@ -39,11 +39,11 @@
                                     @foreach ($question->choices as $key => $choice)
                                         <div class="form-group row">
                                             <div class="col-sm-9">
-                                            <input class="form-control" type="text" name="choice{{ $key+1 }}" value="{{$choice->text}}">
+                                            <input class="form-control" type="text" name="choice{{ $key+1 }}" value="{{ $choice->text }}">
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="hidden" name="choice{{ $key+1 }}_id" value="{{$choice->id}}">
+                                                <input type="hidden" name="choice{{ $key+1 }}_id" value="{{ $choice->id }}">
                                                 <input type="radio" name="is_correct" value="choice{{ $key+1 }}" {{$choice->is_correct == '1' ? 'checked' : '' }}>
                                                 </label>
                                             </div>
