@@ -9,6 +9,11 @@ use App\Category;
 
 class CategoryController extends Controller
 {
+    public function __construct(){
+        
+        $this->middleware('auth');
+    }
+
     public function admin(){
         $listOfcategories=Category::all();
         return view('users.admin', compact('listOfcategories'));

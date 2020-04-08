@@ -8,16 +8,39 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/materia/bootstrap.min.css" rel="stylesheet" integrity="sha384-1tymk6x9Y5K+OF0tlmG2fDRcn67QGzBkiM3IgtJ3VrtGrIi5ryhHjKjeeS60f1FA" crossorigin="anonymous"> 
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #151515;
+
+            nav{
+                background: url("image/orange.jpg") no-repeat;
+                background-size: cover;
+            }
+
+            .content {
+                background: url("image/orange.jpg") no-repeat fixed left top;
+                background-size: cover;
+                text-align: center;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
-                margin: 0;
+                margin: 0; 
+            }
+
+            .content h1{
+                font-size: 70px;
+                padding-top: 200px;
+                color: #fff;
+            }
+
+            .content h2{
+                font-size: 20px;
+                padding-top: 100px;
+                color: #fff;
+                margin-left: 200px;
+                margin-right: 200px;
             }
 
             .full-height {
@@ -59,40 +82,41 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
-            }
+                margin-bottom: 30px; */
+            } 
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        fels 
+                    </a>      
+                    <ul class="nav">
+                        @if (Route::has('login'))
+                                @auth
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    </li>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                                    @if (Route::has('register'))
+                                        <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                        </li>
+                                    @endif
+                                @endauth
                         @endif
-                    @endauth
+                    </ul>
                 </div>
-            @endif
-
+            </nav>     
             <div class="content">
-                <div class="title m-b-md">
-                    <img src="image/welcome.jpg" alt="">
-                </div>
-
-                <div class="links">
-                    <a href="https://gc-eikaiwa.com">Link1</a>
-                    <a href="https://goodconversation-eikaiwa.com">Link2</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <h1> Framgia E-learning </h1>
+                <h2>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite.</h2>
             </div>
         </div>
     </body>

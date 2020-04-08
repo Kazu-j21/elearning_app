@@ -7,15 +7,15 @@
                 <div class="card-header">
                     <div class="row">
                             <div class="col-sm-6">
-                                <span>Admin|{{$category->title}}|Word</span>
+                                <span>Admin|{{ $category->title }}|Word</span>
                             </div>
                             <div class="col-sm-6 text-right">
-                                <a class="btn btn-sm" href="/admin/{{$category->id}}/add">Back</a>
+                                <a class="btn btn-sm" href="/admin/{{ $category->id }}/add">Back</a>
                             </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form class="new_word" action="/admin/{{$category->id}}/addWord/store" method="post">
+                    <form class="new_word" action="/admin/{{ $category->id }}/addWord/store" method="post">
                         @csrf
                         {{-- <input name="utf8" type="hidden" value="✓"> --}}
                         <input type="hidden" name="category_id" value="{{ $category->id }}">
@@ -26,7 +26,7 @@
                                         <label for="word_content">Word</label>
                                     </div>
                                     <div class="col-sm-7">
-                                        <input class="form-control" type="text" name="text">
+                                        <input class="form-control" type="text" name="text" required>
                                     </div>
                                 </div>
 
@@ -41,7 +41,7 @@
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="radio" name="is_correct" value="choice1">
+                                                <input type="radio" name="is_correct" value="choice1" required>
                                                 </label>
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="radio" name="is_correct" value="choice2">
+                                                <input type="radio" name="is_correct" value="choice2" required>
                                                 </label>
                                             </div>
                                         </div>
@@ -61,7 +61,7 @@
                                             </div>
                                             <div class="col-sm-3">
                                                 <label for="">Correct
-                                                <input type="radio" name="is_correct" value="choice3">
+                                                <input type="radio" name="is_correct" value="choice3" required>
                                                 </label>
                                             </div>
                                         </div>
@@ -78,5 +78,4 @@
             </div>
         </div>
     </div>
-   
 @endsection

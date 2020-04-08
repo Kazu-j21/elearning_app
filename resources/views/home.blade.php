@@ -1,41 +1,96 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/image/user-image.png" class="card-img-top" alt="">
-                <h5 class="card-title">{{Auth::user()->name}}</h5>
-                <h5 class="card-title">{{Auth::user()->email}}</h5>
-            </div>
-            <div class="card">
-                <a href="/" class="btn btn-primary">Edit Profile</a>
-            </div>
-            <div class="card">
-                <a href="/" class="btn btn-primary">Change Avator</a>
-            </div>
-            <div class="card">
-                <p class="text-center">following : <p class="text-center">11</p></p> 
-                <p class="text-center">followers : <p class="text-center">22</p></p>
-            </div>
-            <div class="card">
-                <p class="text-center">The number of the posts : <p class="text-center">33</p></p>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card mb-4">
-                <div class="card-header">ACTIVITY FEED</div>
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="user-info text-center">
+                            <div class="avatar">
+                                <div class="default">
+                                    <i class="glyphicon glyphicon-user">
+                                        <img src="/image/user-image.png" class="card-img-top col-sm-8" alt="">
+                                    </i>
+                                </div>
+                                <h3 class="mb-0">{{ Auth::user()->name }}</h3>
+                                <div class="text-gray mb-15">{{ Auth::user()->email }}</div>
+                                <div class="mt-3">
+                                    {{-- <a class="btn btn-sm btn-warning text-white" href="/">Change Avatar</a> --}}
+                                    <a class="btn btn-sm btn-info text-white" href="/profile">View profile</a>
+                                </div>
+                            </div>
                         </div>
-                    @endif
-                    <p> Nothing to show</p> 
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <div class="d-inline-block mr-4">
+                                <h5 class="d-inline">{{ auth()->user()->followedUsers()->count() }}</h5>
+                                <span>following</span>
+                            </div>
+                            <div class="d-inline-block mr-4">
+                                <h5 class="d-inline">{{ auth()->user()->followers()->count() }}</h5>
+                                <span>followers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <a class="btn btn-info btn-block no-border text-white p-3">
+                            <h4> {{ Auth::user()->learnedWords()->count() }}</h4>
+                                {{-- {{auth()->user()->learnedWords()->count()}} --}}
+                            words learned
+                        </a>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-sm-8">
+                <div class="card activity-feed">
+                    <div class="card-header">
+                        <strong class="heading">Activity feed</strong>
+                    </div>
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                        @if ($activities->count() > 0)
+                            {{-- to display array content one by one, we use foreach --}}
+                            <ul class="list-unstyled">
+                                @foreach ($activities->sortByDesc('created_at') as $activity)
+                                <li class="media mb-5">
+                                    <img src="https://www.uclg-planning.org/sites/default/files/styles/featured_home_left/public/no-user-image-square.jpg?itok=PANMBJF-" class="mr-3" width="64">
+                                    <div class="media-body">
+                                    <h5 class="mt-0 mb-1">
+                                        @if ($activity->action_type == "App\Relationship")
+                                            <p>
+                                                {{ $activity->text }}
+                                                <br>
+                                                <small>{{ $activity->created_at->diffForHumans() }}</small>
+                                            </p>
+                                        @else
+                                            <p>
+                                                {{ $activity->text }}
+                                                <br>
+                                                <small>{{ $activity->created_at->diffForHumans() }}</small>
+                                            </p>
+                                        @endif
+                                    </h5>
+                                    </div>
+                                </li>
+                                @endforeach
+                            </ul>
+                        @else
+                            <p> Nothing to show</p> 
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

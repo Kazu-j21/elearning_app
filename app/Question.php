@@ -21,4 +21,8 @@ class Question extends Model
     public function answer(){
         return $this->choices()->where('is_correct', 1)->first();
     }
+    
+    public function answers(){
+        return $this->hasMany('App\Answer');
+    }
 }

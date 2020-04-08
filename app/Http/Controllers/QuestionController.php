@@ -10,35 +10,17 @@ use App\Choice;
 
 class QuestionController extends Controller
 {
-    // public function addWordstore(Request $request){
-    //     Question::create([
-    //         'category_id' => $request->category_id,
-    //         'text' => $request->text
-    //     ]);
-
-    //     return back();
-    //     // return redirect()->route('admin.add', ['id' => $category->id]);
-    // }
-
+    public function __construct(){
+             
+        $this->middleware('auth');
+    }
+    
     public function addWordstore(Request $request){
         // dd($request->all());
         $question = Question::create([
             'category_id' => $request->category_id,
             'text' => $request->text
         ]);
-
-        // $choice1=false;
-        // if($request->is_correct == "choice1"){
-        //    $choice1 = true;
-        // } else{
-        //     $choice1 = false;
-        // }
-
-        // $choice = Choice::create([
-        //     'question_id' => $question->id,
-        //     'text' => $request->choice1,
-        //     'is_correct' => $choice1
-        // ]);
 
         $choice = Choice::create([
             'question_id' => $question->id,
