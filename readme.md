@@ -20,33 +20,27 @@ A language e-learning web application that lets users answer a group of words wi
 * User can see activity log from user and following users
 * User can see the number of followed and following users
 
-
 ・Profile page
 * User can see profile details such as name and avatar
 * User can see his own activities
 * User can see the number of followed and following users
-
 
 ・Users list page
 * User can see all users with avatar and name
 * User can follow other user
 * The page has a pagination function
 
-
 ・Category list page
 * User can see all categories with title and description
 * User can start a lesson
 * The page has a pagination function
 
-
 ・Lesson 
 * User can answer by selecting choices of words
 * User can see progress of the lesson
 
-
 ・Lesson result page
 * User can see the result by the end of a lesson
-
 
 ・Admin pages for  :
 * Categories : CRUD
