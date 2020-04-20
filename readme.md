@@ -9,7 +9,7 @@ A language e-learning web application that lets users answer a group of words wi
 * User signup
 * User log in
 * User settings
-* Follow/Unfollow function
+* Follow/Unfollowing function
 * Lesson answering function
 * Activity log - Following and lesson activities
 * Category management in Admin page
