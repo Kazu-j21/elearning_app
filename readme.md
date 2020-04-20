@@ -9,7 +9,7 @@ A language e-learning web application that lets users answer a group of words wi
 * User signup
 * User log in
 * User settings
-* Following function
+* Follow/Unfollow function
 * Lesson answering function
 * Activity log - Following and lesson activities
 * Category management in Admin page
@@ -17,17 +17,17 @@ A language e-learning web application that lets users answer a group of words wi
 # Page Contents / User story
 ・Dashboard (homepage when logged in)
 * User can see how many words are learned
-* User can see activity log from user and following users
-* User can see the number of followed and following users
+* User can see activity logs from the user and the following users
+* User can see the number of followers and following users
 
 ・Profile page
 * User can see profile details such as name and avatar
 * User can see his own activities
-* User can see the number of followed and following users
+* User can see the number of followers and following users
 
 ・Users list page
 * User can see all users with avatar and name
-* User can follow other user
+* User can follow/unfollow other users
 * The page has a pagination function
 
 ・Category list page
@@ -38,6 +38,7 @@ A language e-learning web application that lets users answer a group of words wi
 ・Lesson 
 * User can answer by selecting choices of words
 * User can see progress of the lesson
+* The page has a pagination function that paginate automatically after a user answer
 
 ・Lesson result page
 * User can see the result by the end of a lesson
