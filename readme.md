@@ -1,3 +1,6 @@
+# URL
+・http://aki-elearning.herokuapp.com/
+
 # Project Details
 Project name: Framgia E-learning 
 
@@ -48,4 +51,10 @@ A language e-learning web application that lets users answer a group of words wi
 * Words : CRUD
 * Words options and answers  : CRUD
 
-
+# Requirement
+・Laravel
+・Bootstrap 4
+・Html/Css
+・MySQL
+・Docker/docker-compose
+・Heroku
