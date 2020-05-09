@@ -27,6 +27,15 @@ A language e-learning web application that lets users answer a group of words wi
 * Activity log - Following and lesson activities
 * Category management in Admin page
 
+* ユーザー登録
+* ログイン/ログアウト
+* フォロー/アンフォロー
+* レッスン回答
+* ユーザー自身の回答ログ
+* フォローユーザーのアクティビティログ
+* 管理画面での三択問題の作成、編集、削除
+
+
 # Page Contents / User story
 ・Dashboard (homepage when logged in)
 * User can see how many words are learned
