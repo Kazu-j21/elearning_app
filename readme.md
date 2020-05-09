@@ -39,7 +39,7 @@ A language e-learning web application that lets users answer a group of words wi
 * 管理画面での三択問題の作成、編集、削除
 
 
-# Page Contents / User story
+# P Contents 
 ・Dashboard (homepage when logged in)
 * User can see how many words are learned
 * User can see activity logs from the user and the following users
