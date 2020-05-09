@@ -20,12 +20,15 @@ A language e-learning web application that lets users answer a group of words wi
 
 
 # Project Functionalities
+
 * User signup
 * User log in
 * Follow/Unfollowing function
 * Lesson answering function
 * Activity log - Following and lesson activities
 * Category management in Admin page
+
+機能：
 
 * ユーザー登録
 * ログイン/ログアウト
