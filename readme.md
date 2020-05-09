@@ -12,10 +12,16 @@ Project description:
 
 A language e-learning web application that lets users answer a group of words with a corresponding choice. Users can be able to interact with other users. Keeping track of their performance, as well as other people’s performance. This project will also have its own administrator section, to manage categories as well as other user’s information.
 
+主にLaravelとBootstrapを使って作成したE-learning Systemになります。
+ユーザーが三択の問題を作り、それに対しユーザー自身、また他ユーザーが回答できるものになっています。また回答後、回答した記録がアクティビティログとしてダッシュボードに自動で投稿される仕組みになっています。また他ユーザーのフォローもでき、フォロー後、他ユーザーのアクティビティもダッシュボードに投稿されます。
+
+
+制作期間はおよそ1か月です。
+
+
 # Project Functionalities
 * User signup
 * User log in
-* User settings
 * Follow/Unfollowing function
 * Lesson answering function
 * Activity log - Following and lesson activities
