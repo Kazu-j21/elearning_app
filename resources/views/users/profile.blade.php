@@ -50,7 +50,7 @@
                             @if (auth()->user()->activities->count() > 0)
                                 @foreach (auth()->user()->activities->sortByDesc('created_at') as $activity)
                                     <li class="media mb-5">
-                                        <img src="https://www.uclg-planning.org/sites/default/files/styles/featured_home_left/public/no-user-image-square.jpg?itok=PANMBJF-" class="mr-3" width="64">
+                                        <img src="/image/user-image.png" class="mr-3" width="64">
                                         <div class="media-body">
                                         <h5 class="mt-0 mb-1">
                                             @if ($activity->action_type == "App\Relationship")
