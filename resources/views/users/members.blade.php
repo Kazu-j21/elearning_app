@@ -18,7 +18,7 @@
                                         <div class="avatar">
                                             <div class="default">
                                                 <i class="glyphicon glyphicon-user">
-                                                    <img src="https://www.uclg-planning.org/sites/default/files/styles/featured_home_left/public/no-user-image-square.jpg?itok=PANMBJF-" class="mr-3" width="64">
+                                                    <img src="/image/user-image.png" class="mr-3" width="64">
                                                 </i>
                                             </div>
                                         </div>
