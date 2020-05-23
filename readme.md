@@ -2,7 +2,7 @@
 * http://aki-elearning.herokuapp.com/
 
 * For login, you can use
-    * email: test@gmail.com
+    * email: test@email.com
     * password: testtest
 
 # Project Details
