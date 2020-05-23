@@ -12,7 +12,7 @@
                         <div class="col-sm-6 text-right">
                             <h2 class="text-muted">
                                 Result:
-                                <span class="text-warning">{{ $lesson->correctAnswers() }}</span>
+                                <span class="text-info">{{ $lesson->correctAnswers() }}</span>
                                 of {{ $lesson->answers->count() }}
                             </h2>
                         </div>

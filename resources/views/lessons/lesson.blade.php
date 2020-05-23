@@ -10,14 +10,14 @@
                     </div>
                     <div class="col-sm-3 text-right">
                         <h3 class="text-muted">
-                            <span class="text-warning">{{ $questions->currentPage() }}</span>
+                            <span class="text-info">{{ $questions->currentPage() }}</span>
                             of {{ $questions->lastPage() }}
                         </h3>
                     </div>
                 </div>
                 @foreach ($questions as $question)
                     <div class="card p-3">
-                        <h2 class="text-warning text-center">{{ $question->text }}</h2>
+                        <h2 class="text-info text-center">{{ $question->text }}</h2>
 
                         @foreach ($question->choices as $choice)
                             <div class="choices">
